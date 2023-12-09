@@ -1,0 +1,22 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Cards (Films and Movies)</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="light">
+  <ion-card *ngFor="let c of card; let i = index">
+    <img [alt]='c.img' [src]='c.img' />
+    <ion-card-header>
+      <ion-card-title>{{c.title}}</ion-card-title>
+      <ion-card-subtitle>{{c.subtitle}}</ion-card-subtitle>
+    </ion-card-header>
+  
+    <ion-card-content>
+      {{c.content}}
+    </ion-card-content>
+  </ion-card>
+</ion-content>
